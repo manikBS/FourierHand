@@ -45,7 +45,7 @@ function toggleDrawMode() {
 function userDrawing(){
   if(mouseIsPressed && mouseY>0){
         stroke(255,200,150)
-        strokeWeight(5)
+        strokeWeight(3)
         line(mouseX,mouseY,pmouseX, pmouseY)
         a.push([mouseX-origin[0],origin[1]-mouseY])
   }
@@ -60,7 +60,7 @@ function drawFourier(){
     drawArrow(createVector(...v0),  createVector(...v1), 'white');
     if(index===arr.length-1){
       extraCanvas.stroke(255,0,100)
-      extraCanvas.strokeWeight(5)
+      extraCanvas.strokeWeight(3)
       extraCanvas.point(v1[0],v1[1])
     }
     v0 = v1;
@@ -111,7 +111,7 @@ function drawArrow(base, vec, myColor) {
   strokeWeight(1);
   fill(myColor);
   line(base.x, base.y, vec.x, vec.y);
-  stroke(70,70,70);
+  stroke(100,100,100);
   strokeWeight(1);
   noFill();
   circle(base.x, base.y,2*base.dist(vec))
